@@ -53,6 +53,7 @@ const Cards = ({ result }) => {
             max="2021-12-31"
             readOnly
           />
+          <i className="far fa-calendar-check"></i>
           <Button>Add to favorites</Button>
         </Input>
         <Artist>{result.artist}</Artist>

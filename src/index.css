@@ -5,8 +5,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  display: flex;
-  justify-content: center;
 }
 
 code {
@@ -19,4 +17,11 @@ code {
   padding: 7px;
   min-width: 10px;
   color: black;
+}
+
+.fa-calendar-check {
+  margin-right: 10px;
+  margin-left: -30px;
+  overflow: visible;
+  position: relative;
 }
