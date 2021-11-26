@@ -10,8 +10,8 @@ const Label = styled.label`
   background: white;
   width: 15vw;
   max-width: 100px;
-  margin: 10px;
-  padding: 10px;
+  margin: 10px 2px;
+  padding: 13px;
   border: solid 2px;
   border-color: black;
   border-radius: 15px;

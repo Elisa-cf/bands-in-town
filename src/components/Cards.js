@@ -8,27 +8,23 @@ const Container = styled.div`
   overflow: hidden;
   box-shadow: 0px 0px 15px -5px;
   border-radius: 3px;
-  margin-top: 20px;
+  margin: 20px 20px;
   :hover {
     box-shadow: 0px 0px 15px 0px;
   }
-  @media screen and (min-width: 860px) {
-     {
-    }
-  }
 `;
-
-const Form = styled.form``;
 
 const Image = styled.img`
   overflow: hidden;
   height: 250px;
+  width: 100%;
 `;
 
 const Date = styled.input`
   margin: 10px 10px;
   padding: 5px 5px;
 `;
+
 const Button = styled.button`
   padding: 7.5px 5px;
   cursor: pointer;
@@ -39,6 +35,7 @@ const Button = styled.button`
     // font-weight: bold;
   }
 `;
+
 const Input = styled.div`
   display: flex;
   justify-content: flex-start;
@@ -49,15 +46,17 @@ const Artist = styled.h3`
   text-align: left;
   padding-left: 15px;
 `;
+
 const Location = styled.p`
   text-align: left;
   padding-left: 15px;
 `;
+
 const Cards = ({ result }) => {
   return (
     <Container>
       <Image src={result.img} />
-      <Form>
+      <form>
         <Input>
           <Date
             type="date"
@@ -73,7 +72,7 @@ const Cards = ({ result }) => {
         </Input>
         <Artist>{result.artist}</Artist>
         <Location>{result.location}</Location>
-      </Form>
+      </form>
     </Container>
   );
 };

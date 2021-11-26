@@ -9,8 +9,6 @@ const Section = styled.section`
   width: 100%;
   flex-flow: wrap column;
   align-items: center;
-  justify-content: space-between;
-
   @media screen and (min-width: 860px) {
      {
       flex-flow: row wrap;
