@@ -1,5 +1,5 @@
 # Music Maniac
-Live site: 
+Live site: https://music-event-maniac.netlify.app/
 
 Music Maniac was written in just 24h by 3 students during a Hackathon:
 - Josh Meyers 
