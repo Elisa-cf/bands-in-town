@@ -10,6 +10,7 @@ const Container = styled.div`
   overflow: hidden;
   box-shadow: 0px 0px 15px -5px;
   border-radius: 3px;
+  margin-top: 20px;
   :hover {
     box-shadow: 0px 0px 15px 0px;
   }
