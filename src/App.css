@@ -7,6 +7,11 @@
   align-items: center;
 }
 
+/* @media screen and (min-width: 768px) {
+  .App {
+  }
+} */
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;

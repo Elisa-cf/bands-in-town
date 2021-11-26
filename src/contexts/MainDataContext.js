@@ -10,7 +10,7 @@ const MainDataContextProvider = ({ children }) => {
       artist: "Peggy Gou",
       date: "Dec. 3rd, 2021, 11:59 PM",
       location: "Sala Apolo, Carrer Nou de la Rambla, 113, Barcelona, Spain",
-      genre: "Korean Pop",
+      genre: "Korean Pop, Metal",
       img: "https://photos.bandsintown.com/thumb/8659446.jpeg",
       summary: "Peggy Gou Barcelona, Spain Sala Apolo Korean Pop",
       isFavorite: false,
@@ -106,11 +106,13 @@ const MainDataContextProvider = ({ children }) => {
 
   const handleSearchInput = (item) => {
     let isIncluded = [];
-    const genresFilter = Genres.filter((musicGenre) => musicGenre.isSelected);
-    genresFilter.filter((element) => {
-      return isIncluded.push(
+    const genresFilter = selection.filter(
+      (musicGenre) => musicGenre.isSelected
+    );
+    genresFilter.forEach((element) => {
+      isIncluded.push(
         element.genre.toUpperCase()
-          ? item.genre.toUpperCase().includes(element.genre)
+          ? item.genre.toUpperCase().includes(element.genre.toUpperCase())
           : true
       );
     });

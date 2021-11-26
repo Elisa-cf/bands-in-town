@@ -4,8 +4,6 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
-  margin-top: 50px;
-  margin-bottom: 50px;
   width: 300px;
   overflow: hidden;
   box-shadow: 0px 0px 15px -5px;
@@ -14,7 +12,14 @@ const Container = styled.div`
   :hover {
     box-shadow: 0px 0px 15px 0px;
   }
+  @media screen and (min-width: 860px) {
+     {
+    }
+  }
 `;
+
+const Form = styled.form``;
+
 const Image = styled.img`
   overflow: hidden;
   height: 250px;
@@ -22,8 +27,18 @@ const Image = styled.img`
 
 const Date = styled.input`
   margin: 10px 10px;
+  padding: 5px 5px;
 `;
-const Button = styled.button``;
+const Button = styled.button`
+  padding: 7.5px 5px;
+  cursor: pointer;
+  // border-color: #800080;
+  border-radius: 5px;
+  background-color: white;
+  :hover {
+    // font-weight: bold;
+  }
+`;
 const Input = styled.div`
   display: flex;
   justify-content: flex-start;
@@ -34,7 +49,7 @@ const Artist = styled.h3`
   text-align: left;
   padding-left: 15px;
 `;
-const Location = styled.h4`
+const Location = styled.p`
   text-align: left;
   padding-left: 15px;
 `;
@@ -42,7 +57,7 @@ const Cards = ({ result }) => {
   return (
     <Container>
       <Image src={result.img} />
-      <form>
+      <Form>
         <Input>
           <Date
             type="date"
@@ -58,7 +73,7 @@ const Cards = ({ result }) => {
         </Input>
         <Artist>{result.artist}</Artist>
         <Location>{result.location}</Location>
-      </form>
+      </Form>
     </Container>
   );
 };

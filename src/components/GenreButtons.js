@@ -3,21 +3,27 @@ import { useContext } from "react";
 import styled from "styled-components";
 import MainDataContext from "../contexts/MainDataContext";
 
-const Input = styled.input`
-  position: absolute;
-  left: -9999px;
-  right: -9999px;
-`;
-
 const Label = styled.label`
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-around;
-  background: grey;
+  background: white;
   width: 15vw;
   max-width: 100px;
   margin: 10px;
   padding: 10px;
+  border: solid 2px;
+  border-color: black;
+  border-radius: 15px;
+  :hover {
+    font-weight: bold;
+  }
+`;
+
+const Input = styled.input`
+  position: absolute;
+  left: -9999px;
+  right: -9999px;
 `;
 
 const Section = styled.section`
@@ -28,24 +34,22 @@ const GenreButtons = () => {
   const { genres, setSelection, selection } = useContext(MainDataContext);
 
   const clickHandler = (index) => {
-    const newSelection = [...selection];
-    console.log(newSelection[index]);
+    setSelection(genres);
 
+    const newSelection = [...selection];
     newSelection[index].isSelected = !newSelection[index].isSelected;
     setSelection(newSelection);
-    console.log(newSelection);
   };
 
   return (
     <Section>
       {genres.map((item, index) => {
         return (
-          <Label>
+          <Label key={nanoid()}>
             {item.genre}
             <Input
               type="checkbox"
-              key={nanoid()}
-              onClick={() => clickHandler(index)}
+              onChange={() => clickHandler(index)}
               checked={item.isSelected}
             />
           </Label>
