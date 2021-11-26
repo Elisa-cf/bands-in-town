@@ -1,10 +1,9 @@
 # Music Maniac
 Live site: 
 
-Music Maniac was written by 3 students as a project for the Wild Code School:
-
--
--
+Music Maniac was written in just 24h by 3 students during a Hackathon:
+- Josh Meyers 
+- Liana Van Zyl
 - Elisa Canyelles
 
 
